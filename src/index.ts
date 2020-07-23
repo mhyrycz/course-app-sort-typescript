@@ -1,9 +1,14 @@
-console.log('hi there')
+class Sort {
 
+    constructor(private collection: number[]){}
 
-function returnString(int: number): string{
-    return `It is ${int}`
+    sort(): void{
+
+    }
 }
 
-returnString(3)
 
+const sort = new Sort([1,2,5,-8])
+
+
+console.log(sort)

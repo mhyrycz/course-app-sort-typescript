@@ -1,8 +1,16 @@
-class Sort {
-	constructor(public collection: NumbersCollection) {}
+interface Sortable {
+    length: number;
+    compare(leftIndex: number, rightIndex: number): boolean;
+    swap(leftIndex: number, rightIndex: number): void
+}
 
-	sort(): number[] {
-        const {length} = this.collection
+
+
+class Sort {
+	constructor(public collection: Sortable) {}
+
+	sort(): void {
+        const {length} = this.collection 
 		for (let i = 0; i < length; i++) {
 			for (let j = 0; j < length - i - 1; j++) {
 				if (this.collection.compare(j, j+1)) {
@@ -10,7 +18,6 @@ class Sort {
 				}
 			}
 		}
-		return this.collection.data;
 	}
 }
 
@@ -36,7 +43,6 @@ const numbers = new NumbersCollection([ 1, 5, 2, -8 ]);
 
 const sort = new Sort(numbers)
 
-console.log(sort.sort())
+sort.sort()
 
-
-// console.log(sort2.sort());
+console.log(numbers.data)

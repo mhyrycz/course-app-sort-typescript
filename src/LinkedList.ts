@@ -70,4 +70,15 @@ export class LinkedList {
 		leftNode.data = rightNode.data;
 		rightNode.data = leftNodeData;
 	}
+
+	print(): number[] {
+		let array: number[] | null = [];
+		let tail = this.head;
+		while (tail !== null) {
+			array.push(tail.data);
+			tail = tail.next;
+		}
+
+		return array;
+	}
 }

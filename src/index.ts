@@ -90,7 +90,4 @@ const newSort = new Sort(newList)
 
 newSort.sort()
 
-console.log(newList.at(0).data)
-console.log(newList.at(1).data)
-console.log(newList.at(2).data)
-console.log(newList.at(3).data)
+console.log(newList.print())

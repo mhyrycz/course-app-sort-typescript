@@ -1,5 +1,6 @@
-import {NumbersCollection} from "./NumbersCollection"
-import {CharactersCollection} from "./CharactersCollection"
+// import {NumbersCollection} from "./NumbersCollection"
+// import {CharactersCollection} from "./CharactersCollection"
+import { LinkedList } from './LinkedList'
 
 interface Sortable {
     length: number;
@@ -22,22 +23,22 @@ class Sort {
 	}
 }
 
-const numbers = new NumbersCollection([ 1, 5, 2, -8 ]);
+// const numbers = new NumbersCollection([ 1, 5, 2, -8 ]);
 
-const sort = new Sort(numbers)
+// const sort = new Sort(numbers)
 
-sort.sort()
+// sort.sort()
 
-console.log(numbers.data)
+// console.log(numbers.data)
 
 
-const characters = new CharactersCollection('acdbfeX')
+// const characters = new CharactersCollection('acdbfeX')
 
-const sort2 = new Sort(characters)
+// const sort2 = new Sort(characters)
 
-sort2.sort()
+// sort2.sort()
 
-console.log(characters.data)
+// console.log(characters.data)
 
 
 // parent class approach - my check
@@ -79,3 +80,17 @@ console.log(characters.data)
 
 // console.log(characters.data)
 
+const newList = new LinkedList()
+newList.add(500)
+newList.add(-10)
+newList.add(-3)
+newList.add(4)
+
+const newSort = new Sort(newList)
+
+newSort.sort()
+
+console.log(newList.at(0).data)
+console.log(newList.at(1).data)
+console.log(newList.at(2).data)
+console.log(newList.at(3).data)

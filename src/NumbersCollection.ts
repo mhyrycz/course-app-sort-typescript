@@ -1,9 +1,13 @@
-export class NumbersCollection {
-    constructor(public data: number[]) {}
-    
-    get length(): number {
-        return this.data.length
-    }
+import { Sorter } from './Sorter';
+
+export class NumbersCollection extends Sorter {
+	constructor(public data: number[]) {
+		super();
+	}
+
+	get length(): number {
+		return this.data.length;
+	}
 
 	compare(leftIndex: number, rightIndex: number): boolean {
 		return this.data[leftIndex] > this.data[rightIndex];
@@ -15,7 +19,6 @@ export class NumbersCollection {
 		this.data[rightIndex] = leftHand;
 	}
 }
-
 
 // parent class approach - my check
 
